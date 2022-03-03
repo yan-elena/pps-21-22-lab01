@@ -48,10 +48,13 @@ public class CircularListImpl implements CircularList {
 
     @Override
     public void reset() {
-        final List<Integer> resetList = new LinkedList<>();
-        resetList.add(this.list.get(this.index));
-        resetList.addAll(this.list.subList(1, this.size()));
-        this.list = resetList;
+        if (this.size() > 1) {
+            final List<Integer> resetList = new LinkedList<>();
+            resetList.add(this.list.get(this.index));
+            resetList.addAll(this.list.subList(2, this.size()));
+            resetList.add(this.list.get(0));
+            this.list = resetList;
+        }
         this.index = -1;
     }
 

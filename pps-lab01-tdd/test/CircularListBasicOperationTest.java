@@ -42,6 +42,8 @@ public class CircularListBasicOperationTest {
         this.circularList.next();
         this.circularList.reset();
         assertEquals(second, this.circularList.next().orElseThrow());
+        assertEquals(third, this.circularList.next().orElseThrow());
+        assertEquals(first, this.circularList.next().orElseThrow());
     }
 
     @Test
