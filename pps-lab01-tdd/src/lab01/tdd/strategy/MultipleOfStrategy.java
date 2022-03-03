@@ -2,6 +2,10 @@ package lab01.tdd.strategy;
 
 import lab01.tdd.SelectStrategy;
 
+/**
+ * This class represent an instance of SelectStrategy.
+ * In particular EqualStrategy calculate the multiple element of a given one.
+ */
 public class MultipleOfStrategy implements SelectStrategy {
 
     private final int divisor;

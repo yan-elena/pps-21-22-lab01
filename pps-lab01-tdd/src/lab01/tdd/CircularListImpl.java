@@ -4,6 +4,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * This class represent an implementation of CircularList.
+ */
 public class CircularListImpl implements CircularList {
 
     private List<Integer> list;
