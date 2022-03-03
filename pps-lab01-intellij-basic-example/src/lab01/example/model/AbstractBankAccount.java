@@ -37,7 +37,7 @@ public abstract class AbstractBankAccount implements BankAccount {
     protected abstract int getFee();
 
     private boolean isWithdrawAllowed(final double amount) {
-        return this.balance >= amount;
+        return this.balance >= amount + getFee();
     }
 
     private boolean checkUser(final int id) {

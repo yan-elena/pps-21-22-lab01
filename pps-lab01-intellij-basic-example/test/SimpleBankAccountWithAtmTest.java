@@ -24,4 +24,13 @@ class SimpleBankAccountWithAtmTest extends AbstractBankAccountTest {
         bankAccount.withdraw(accountHolder.getId(), drawAmount);
         assertEquals(depositAmount - drawAmount - FEE, bankAccount.getBalance());
     }
+
+    @Test
+    void testWithdrawNotAllowed() {
+        final int depositAmount = 100;
+        final int drawAmount = 100;
+        bankAccount.deposit(accountHolder.getId(), depositAmount);
+        bankAccount.withdraw(accountHolder.getId(), drawAmount);
+        assertEquals(depositAmount, bankAccount.getBalance());
+    }
 }
