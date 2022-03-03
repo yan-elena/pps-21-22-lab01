@@ -32,6 +32,16 @@ public class CircularListTest {
 
     @Test
     void testReset() {
+        final int first = 1;
+        final int second = 2;
+        final int third = 3;
+        this.circularList.add(first);
+        this.circularList.add(second);
+        this.circularList.add(third);
+        this.circularList.next();
+        this.circularList.next();
+        this.circularList.reset();
+        assertEquals(second, this.circularList.next().orElseThrow());
     }
 
     @Test

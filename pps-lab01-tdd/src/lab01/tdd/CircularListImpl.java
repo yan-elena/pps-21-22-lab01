@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public class CircularListImpl implements CircularList {
 
-    private final List<Integer> list;
+    private List<Integer> list;
     private int index;
 
     public CircularListImpl() {
@@ -43,6 +43,11 @@ public class CircularListImpl implements CircularList {
 
     @Override
     public void reset() {
+        final List<Integer> resetList = new LinkedList<>();
+        resetList.add(this.list.get(this.index));
+        resetList.addAll(this.list.subList(1, this.size()));
+        this.list = resetList;
+        this.index = -1;
     }
 
     @Override
