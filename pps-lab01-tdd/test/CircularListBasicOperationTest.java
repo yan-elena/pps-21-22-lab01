@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * The test suite for testing the CircularList implementation
+ * The test suite for testing the CircularList basic operations
  */
-public class CircularListTest {
+public class CircularListBasicOperationTest {
 
     private CircularList circularList;
 
@@ -52,20 +52,6 @@ public class CircularListTest {
     }
 
     @Test
-    void testCircularNext() {
-        final int first = 1;
-        final int second = 2;
-        final int third = 3;
-        this.circularList.add(first);
-        this.circularList.add(second);
-        this.circularList.add(third);
-        assertEquals(first, this.circularList.next().orElseThrow());
-        assertEquals(second, this.circularList.next().orElseThrow());
-        assertEquals(third, this.circularList.next().orElseThrow());
-        assertEquals(first, this.circularList.next().orElseThrow());
-    }
-
-    @Test
     void testPrevious() {
         final int first = 1;
         final int second = 2;
@@ -74,17 +60,5 @@ public class CircularListTest {
         assertEquals(first, this.circularList.next().orElseThrow());
         assertEquals(second, this.circularList.next().orElseThrow());
         assertEquals(first, this.circularList.previous().orElseThrow());
-    }
-
-    @Test
-    void testCircularPrevious() {
-        final int first = 1;
-        final int second = 2;
-        final int third = 3;
-        this.circularList.add(first);
-        this.circularList.add(second);
-        this.circularList.add(third);
-        assertEquals(first, this.circularList.next().orElseThrow());
-        assertEquals(third, this.circularList.previous().orElseThrow());
     }
 }
