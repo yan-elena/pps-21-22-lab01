@@ -1,7 +1,5 @@
 package lab01.tdd.strategy;
 
-import lab01.tdd.SelectStrategy;
-
 /**
  * This class represent an implementation of SelectStrategyFactory.
  */

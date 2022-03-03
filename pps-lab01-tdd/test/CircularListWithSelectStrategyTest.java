@@ -1,6 +1,6 @@
 import lab01.tdd.CircularList;
 import lab01.tdd.CircularListImpl;
-import lab01.tdd.SelectStrategy;
+import lab01.tdd.strategy.SelectStrategy;
 import lab01.tdd.strategy.SelectStrategyFactory;
 import lab01.tdd.strategy.SelectStrategyFactoryImpl;
 import org.junit.jupiter.api.BeforeEach;

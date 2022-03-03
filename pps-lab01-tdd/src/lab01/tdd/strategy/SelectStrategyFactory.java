@@ -1,7 +1,5 @@
 package lab01.tdd.strategy;
 
-import lab01.tdd.SelectStrategy;
-
 /**
  * Represent a select Strategy Factory.
  */

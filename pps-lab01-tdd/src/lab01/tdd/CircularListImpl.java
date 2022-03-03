@@ -1,5 +1,7 @@
 package lab01.tdd;
 
+import lab01.tdd.strategy.SelectStrategy;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
