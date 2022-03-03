@@ -52,7 +52,10 @@ public class CircularListImpl implements CircularList {
 
     @Override
     public Optional<Integer> next(SelectStrategy strategy) {
-        return Optional.empty();
+        this.setNextIndex();
+        final Optional<Integer> nextElement = this.list.stream().skip(this.index).filter(strategy::apply).findFirst();
+        nextElement.ifPresent(integer -> this.index = this.list.indexOf(integer));
+        return nextElement;
     }
 
     private void setNextIndex() {
